@@ -38,18 +38,23 @@ end
 # ASSIGNMENT
 
 describe String do
-  # Create a let variable that will pass the first test.
+  context "When let variable is defined as tacos" do
+    let(:favorite_food) {"tacos"}
+    # Create a let variable that will pass the first test.
 
-  # remove the 'x' before running this test
-  xit 'is equal to tacos' do
+    # remove the 'x' before running this test
+    it 'is equal to tacos' do
     expect(favorite_food).to eq('tacos')
-  end
+    end
+end
 
   # remove the 'x' before running this test
   context 'when favorite food is updated' do
     # Change the favorite_food let variable.
+    let (:favorite_food) { "burger"}
 
-    xit 'updates the favorite food' do
+    it 'updates the favorite food' do
+      expect(favorite_food).to eq('burger')
       # Write a test that will pass.
     end
   end
